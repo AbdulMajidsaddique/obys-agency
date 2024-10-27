@@ -1,4 +1,6 @@
-var tl = gsap.timeline()
+// Loader Animation..
+function loadingAnimation(){
+    var tl = gsap.timeline()
 tl.from('.line h1',{
     y:100,
     stagger:0.25,
@@ -32,9 +34,33 @@ tl.from("#page1",{
     y:1600,
     delay:0.2,
     opacity:0,
-    duration:0.5,
+    duration:0.6,
     ease: Power4
 })
 tl.to("#loader",{
     display:"none"
 })
+tl.from('#nav',{
+    opacity: 0
+})
+// .hero h1 Animation
+tl.from("#hero1 h1,#hero2 h1,#hero3 h2,#hero4 h1",{
+    y: 120,
+    stagger:0.2
+})
+}
+loadingAnimation();
+
+// Animated custom Cursor...
+function cursorAnimation(){
+    document.addEventListener("mousemove",function(dets){
+        gsap.to("#crsr",{
+         left: dets.x,
+         top:  dets.y
+        })
+     })
+     
+     //Magnet Effect using Sherryjs of Nav-part2 h4...
+     Shery.makeMagnet("#nav-part2 h4");
+}
+cursorAnimation();
