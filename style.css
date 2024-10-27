@@ -99,7 +99,7 @@ html,body{
 }
 #main{
     position: relative;
-    background-color: #030303;
+    background-color: #151515;
 }
             /* Page1 layout */
 #page1{
@@ -123,33 +123,216 @@ html,body{
     font-size: 1vw;
     font-weight: 500;
 }
-.hero{
+.hero {
+    /* background-color: red; */
     width: 72%;
-    margin-left: 28%;
+    margin-left: 27%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
-    overflow: hidden;
+    /* background-color: red; */
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 999999;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+
 }
-.hero:nth-child(2){
+
+
+
+.hero:nth-child(2) {
     margin-top: 13vh;
 }
-.hero h1{
-     font-size: 7.5vw;
-     line-height: 7.2vw;
-     text-transform: uppercase;
-     font-weight: 600;
-}
-.hero h2, .hero h3{
-    font-size: 7.5vw;
-    line-height: 7.2vw;
-    text-transform: uppercase;
+
+.hero h1 {
+    font-size: 7.2vw;
     font-weight: 600;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+    position: relative;
 }
-.hero h2:hover{
+
+#hero1::before {
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: 20%;
+    top: 29%;
+}
+
+.hero h2 {
+    font-size: 7.2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+    border-bottom: 0.5vw solid #fff;
+}
+
+.hero h2:hover {
     -webkit-text-stroke: 2px #fff;
     color: transparent;
     font-weight: 500;
+    border-bottom: 0.5vw solid #ffffff00;
 }
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    padding-top: 11vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#video-container {
+    height: 66vh;
+    width: 71vw;
+    position: relative;
+    left: 28%;
+    background-color: red;
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#video-container video {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    opacity: 0;
+}
+
+
+#video-cursor {
+    background-color: #FFA63D;
+    height: 9vw;
+    width: 9vw;
+    border-radius: 50%;
+    position: absolute;
+    top: -15%;
+    left: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 999;
+}
+
+#video-cursor i {
+    font-size: 2vw;
+}
+
+        /* page3 layout */
+
+   #page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: blue;
+    position: relative;
+   }   
+     /* page4 layout */
+     #page4 {
+        min-height: 100vh;
+        position: relative;
+        width: 100%;
+        /* background-color: rgb(61, 61, 61); */
+        padding: 7vh 0;
+        overflow: hidden;
+    }
+    
+    #page4-content {
+        width: 72vw;
+        position: relative;
+    
+        margin-left: 28%;
+    }
+    
+    #page4-content h1 {
+        font-size: 7vw;
+        text-transform: uppercase;
+        position: relative;
+    }
+    
+    #page4-content h1::before {
+        content: "03";
+        position: absolute;
+        font-size: 3vw;
+        font-weight: 100;
+        font-family: "silk serif";
+        left: -12%;
+        top: 8%;
+    }
+    
+    #page4-content .underline {
+        height: 1px;
+        width: 100%;
+        background-color: #fff;
+        margin: 5vw 0;
+    }
+    
+    #page4-content > p {
+        font-size: 2.05vw;
+        width: 50%;
+        margin-bottom: 3vw;
+    }
+    
+    #page4-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    
+    #page4-flex img {
+        width: 48%;
+    }
+    
+    #page4-flex p {
+        font-size: 0.9vw;
+        width: 19%;
+        margin-left: 1vw;
+    }
+    
+    #page4-blue-div {
+        background-color: #3F7DF4;
+        width: 33vw;
+        padding: 3vw;
+        position: relative;
+        margin-top: -35vh;
+        margin-left: 26vw;
+    }
+    
+    .blue-div-elem {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        /* background-color: red; */
+        padding: 1.7vw 0;
+        border-bottom: 2px solid #ffffff94;
+    }
+    
+    .blue-div-elem h4 {
+        font-size: 1.4vw;
+        font-weight: 500;
+    }
+    
+    .blue-div-elem p {
+        width: 40%;
+        font-size: 0.8vw;
+    }
